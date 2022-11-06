@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Password Generator</title>
+</head>
+<body>
+    <h1>Password Generator</h1>
+    <p>Sélectionnez vos paramètres et générez votre mot de passe !</p>
+    <div class="the-box">
+        <input readonly type="text" id="thepass" value="Ici sera généré votre mot de passe !"></input>
+        <input type="range" min="8" max="24" name="lenght-range" id="pass-lenght" value="12" 
+            oninput="document.getElementById('display-lenght').value=this.value">
+        <input type="text" id="display-lenght" value="12" readonly></input>
+        <div class="under-box">
+            <label class="label" id="lowlab"for="low">a-z</label>
+            <input name="low" type="checkbox" id="low"></input>
+            <label class="label" id="uplab" for="up">A-Z</label>
+            <input name="up" type="checkbox" id="up"></input>
+            <label class="label" id="charlab" for="char">&#%</label>
+            <input name="char" type="checkbox" id="char"></input>
+            <label class="label" id="numlab" for="num">123</label>
+            <input name="num" type="checkbox" id="num"></input>
+        </div>
+        <button id="go">GO</button>
+        <span id="span" class="span">Mot de passé copié !</span>
+    </div>
+    <script src="script.js"></script>
+    </body>
+</html>
